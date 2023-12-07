@@ -20,7 +20,6 @@ def move_backward(apps, schema_editor):
         flat.delete()
 
 
-
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -28,5 +27,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(copy_owners_data_in_flat_to_owners, move_backward),
+        migrations.RunPython(copy_owners_data_in_flat_to_owners,
+                             move_backward),
     ]
