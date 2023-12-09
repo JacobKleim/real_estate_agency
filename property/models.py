@@ -82,7 +82,7 @@ class Complaint(models.Model):
     text = models.TextField('Текст жалобы')
 
     def __str__(self):
-        return f'{self.apartment}'
+        return self.apartment
 
 
 class Owner(models.Model):
@@ -105,4 +105,4 @@ class Owner(models.Model):
         db_index=True)
 
     def __str__(self):
-        return f'{self.name}'
+        return self.name
